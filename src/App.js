@@ -1,9 +1,25 @@
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import InputPage from "./pages/InputPage";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Root />}>
+      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="about" element={<About />} />
+    </Route>
+  )
+);
 
 import "./App.css";
-import RootLayout from "./root/RootLayout";
+
 
 function App() {
-  return <div className="App">hello !!</div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
