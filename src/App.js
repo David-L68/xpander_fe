@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import RootLayout from "./root/RootLayout";
 
 function App() {
-  return <div className="App"></div>;
+  return <div className="App">hello !!</div>;
 }
 
 export default App;
