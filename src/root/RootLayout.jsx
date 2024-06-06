@@ -5,12 +5,10 @@ import "./RootLayout.css";
 
 const RootLayout = () => {
   return (
-    <Container className="mt-5 ">
+    <Container className="mt-4">
       <Container className="d-flex flex-column">
         <NavBar />
-        <Container>
-          <Outlet />
-        </Container>
+        <Outlet />
       </Container>
     </Container>
   );
