@@ -1,0 +1,17 @@
+
+.navbar {
+    background-color: #007bff; /* Ensure the background is primary blue */
+  }
+  
+  .navbar .nav-link,
+  .navbar .navbar-brand,
+  .navbar .dropdown-item {
+    color: #ffffff !important; /* Set text color to white */
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .navbar-brand:hover,
+  .navbar .dropdown-item:hover {
+    color: #ffdd57 !important; /* Set hover color for better visibility */
+  }
+  
