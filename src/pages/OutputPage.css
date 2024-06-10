@@ -1,0 +1,15 @@
+.vis_container {
+    height: 40rem;
+}
+
+.options_menu {
+    flex-basis: 20%; 
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  .visual_results {
+    flex-basis: 80%; 
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
