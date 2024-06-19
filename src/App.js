@@ -1,22 +1,12 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-  BrowserRouter,
-  Routes,
-} from "react-router-dom";
-import InputPage from "./pages/InputPage";
-import "./App.css";
-import RootLayout from "./root/RootLayout";
-import HomePage from "./pages/HomePage";
-import AnimatedRoutes from "./root/AnimatedRoutes";
+import { BrowserRouter } from "react-router-dom";
 
+import "./App.css";
+import AnimatedRoutes from "./root/AnimatedRoutes";
 
 function App() {
   return (
     <BrowserRouter>
-      <AnimatedRoutes/>
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 }

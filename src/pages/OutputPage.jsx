@@ -15,12 +15,12 @@ const OutputPage = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <Container className="mt-3 d-flex flex-column justify-content-center align-items-center gap-2">
-        <h2>Data Visualization</h2>
-        <Container className="d-flex align-items-stretch vis_container gap-2 output_container">
+        <h3>Data Visualization</h3>
+        <Container className="d-flex align-items-stretch gap-2 output_container">
           <Container className="border border-2 options_menu">
             options menu
           </Container>
-          <Container className="border border-2 visual_results"></Container>
+          <Container className="border border-2 visual_results">Visualization</Container>
         </Container>
         <Container className="d-flex mt-2">
           <Button
@@ -41,7 +41,7 @@ const OutputPage = () => {
             DOMINO
           </Button>{" "}
           <Button
-            onClick={""}
+            onClick={() => navigate("/goenrichment")}
             className="ms-4 p-2 align-self-start"
             variant="primary"
             size="lg"

@@ -17,9 +17,9 @@ const AlgosPage = () => {
   };
 
   return (
-    <Container className=" pt-5 d-flex flex-column justify-content-center align-items-center">
-      <h1 className="display-6">Please choose a clustering method:</h1>
-      <Container className="d-flex mt-5 justify-content-center gap-4">
+    <Container className=" pt-3 d-flex flex-column justify-content-center align-items-center">
+      <h2 className="display-6">Please choose a clustering method:</h2>
+      <Container className="d-flex mt-3 justify-content-center gap-3">
         <Card
           style={{ width: "18rem" }}
           onClick={() => handleCardClick("Matisse")}
@@ -40,10 +40,10 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("hierarchical")}
           className={selectedCard === "hierarchical" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src="./assets/unnamed-chunk-2-1.png" />
           <Card.Body>
             <Card.Title>Hierarchical Clustering</Card.Title>
-            <Card.Text className="small pt-2">
+            <Card.Text className="small ">
               Visualization contains dendrogram trees displayed next to and
               above the expression matrix. The rows and columns in the matrix
               are ordered according to the hierarchical clustering dendrograms.
@@ -123,7 +123,7 @@ const AlgosPage = () => {
       <Container>
         <Button
           variant="primary"
-          className="mt-2"
+          className=""
           size="lg"
           onClick={() => navigate("/input")}
         >
