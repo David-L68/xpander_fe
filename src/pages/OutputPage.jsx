@@ -1,27 +1,11 @@
 import { motion } from "framer-motion";
 import { Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import Chart from "react-apexcharts";
+
 import "./OutputPage.css";
 
 const OutputPage = () => {
   const navigate = useNavigate();
-
-  const options = {
-    chart: {
-      id: "basic-bar",
-    },
-    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-    },
-  };
-
-  const series = [
-    {
-      name: "series-1",
-      data: [30, 40, 45, 50, 49, 60, 70, 91],
-    },
-  ];
 
   return (
     <motion.div
@@ -30,24 +14,41 @@ const OutputPage = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
-      <Container className="mt-5 d-flex flex-column justify-content-center align-items-center gap-3">
+      <Container className="mt-3 d-flex flex-column justify-content-center align-items-center gap-2">
         <h2>Data Visualization</h2>
-        <Container className="d-flex align-items-stretch vis_container gap-3">
+        <Container className="d-flex align-items-stretch vis_container gap-2 output_container">
           <Container className="border border-2 options_menu">
             options menu
           </Container>
-          <Container className="border border-2 visual_results">
-            <Chart options={options} series={series} type="bar" width="500" />
-          </Container>
+          <Container className="border border-2 visual_results"></Container>
         </Container>
-        <Button
-          onClick={() => navigate("/algocards")}
-          className="mt-5 p-3 align-self-start"
-          variant="primary"
-          size="lg"
-        >
-          Back
-        </Button>{" "}
+        <Container className="d-flex mt-2">
+          <Button
+            onClick={() => navigate("/algocards")}
+            className="me-auto p-2 align-self-start"
+            variant="primary"
+            size="lg"
+          >
+            Back
+          </Button>{" "}
+          <Button
+            href="https://domino.cs.tau.ac.il/"
+            target="_blank"
+            className=" p-2 align-self-start"
+            variant="secondary"
+            size="lg"
+          >
+            DOMINO
+          </Button>{" "}
+          <Button
+            onClick={""}
+            className="ms-4 p-2 align-self-start"
+            variant="primary"
+            size="lg"
+          >
+            GO Enrichment analysis
+          </Button>{" "}
+        </Container>
       </Container>
     </motion.div>
   );

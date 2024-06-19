@@ -17,7 +17,7 @@ const AlgosPage = () => {
   };
 
   return (
-    <Container className="mt-5 pt-5 d-flex flex-column justify-content-center align-items-center">
+    <Container className=" pt-5 d-flex flex-column justify-content-center align-items-center">
       <h1 className="display-6">Please choose a clustering method:</h1>
       <Container className="d-flex mt-5 justify-content-center gap-4">
         <Card
@@ -25,7 +25,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("Matisse")}
           className={selectedCard === "Matisse" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img className="p-4" variant="top" src="./assets/MatisseSmall.png" />
           <Card.Body>
             <Card.Title>Matisse</Card.Title>
             <Card.Text>
@@ -37,15 +37,16 @@ const AlgosPage = () => {
 
         <Card
           style={{ width: "18rem" }}
-          onClick={() => handleCardClick("Degas")}
-          className={selectedCard === "Degas" ? "selected-card" : ""}
+          onClick={() => handleCardClick("hierarchical")}
+          className={selectedCard === "hierarchical" ? "selected-card" : ""}
         >
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
-            <Card.Title>Degas</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            <Card.Title>Hierarchical Clustering</Card.Title>
+            <Card.Text className="small pt-2">
+              Visualization contains dendrogram trees displayed next to and
+              above the expression matrix. The rows and columns in the matrix
+              are ordered according to the hierarchical clustering dendrograms.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -70,7 +71,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("Samba")}
           className={selectedCard === "Samba" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img className="p-4" variant="top" src="./assets/SambaSmall.png" />
           <Card.Body>
             <Card.Title>Samba</Card.Title>
             <Card.Text>
@@ -79,10 +80,41 @@ const AlgosPage = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+
+        <Card
+          style={{ width: "18rem" }}
+          onClick={() => handleCardClick("som")}
+          className={selectedCard === "som" ? "selected-card" : ""}
+        >
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>SOM</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        <Card
+          style={{ width: "18rem" }}
+          onClick={() => handleCardClick("kmeans")}
+          className={selectedCard === "kmeans" ? "selected-card" : ""}
+        >
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>K-Means</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
       </Container>
       <Button
         variant="primary"
-        className="mt-5"
+        className="mt-3"
         size="lg"
         onClick={handleRunClick}
       >
@@ -91,7 +123,7 @@ const AlgosPage = () => {
       <Container>
         <Button
           variant="primary"
-          className="mt-5"
+          className="mt-2"
           size="lg"
           onClick={() => navigate("/input")}
         >
