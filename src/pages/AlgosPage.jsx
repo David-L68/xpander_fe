@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import "./AlgosPage.css";
 import { useNavigate } from "react-router-dom";
+import { AlgosContext } from "../context/AlgosProvider";
 
 const AlgosPage = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const { setAlgorithm } = useContext(AlgosContext);
+
   const navigate = useNavigate();
 
   const handleCardClick = (cardTitle) => {
     setSelectedCard(cardTitle);
+    setAlgorithm(cardTitle);
   };
 
   const handleRunClick = () => {
-    console.log(selectedCard);
     navigate("/output");
   };
 
@@ -25,7 +28,11 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("Matisse")}
           className={selectedCard === "Matisse" ? "selected-card" : ""}
         >
-          <Card.Img className="p-4" variant="top" src="./assets/MatisseSmall.png" />
+          <Card.Img
+            className="p-4"
+            variant="top"
+            src="./assets/MatisseSmall.png"
+          />
           <Card.Body>
             <Card.Title>Matisse</Card.Title>
             <Card.Text>
@@ -71,7 +78,11 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("Samba")}
           className={selectedCard === "Samba" ? "selected-card" : ""}
         >
-          <Card.Img className="p-4" variant="top" src="./assets/SambaSmall.png" />
+          <Card.Img
+            className="p-4"
+            variant="top"
+            src="./assets/SambaSmall.png"
+          />
           <Card.Body>
             <Card.Title>Samba</Card.Title>
             <Card.Text>
@@ -110,7 +121,6 @@ const AlgosPage = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-
       </Container>
       <Button
         variant="primary"
