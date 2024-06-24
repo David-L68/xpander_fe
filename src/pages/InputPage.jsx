@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useStatse } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const InputPage = () => {
   const navigate = useNavigate();
   
 
-  const [userFile, setUserFile] = useState("");
+  // const [userFile, setUserFile] = useState("");
 
   return (
     <motion.div

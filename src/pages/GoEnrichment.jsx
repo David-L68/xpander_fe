@@ -21,6 +21,13 @@ const GoEnrichment = () => {
           <div className="text-center me-5 pe-5 flex-grow-1">
             <h3 className="mb-0">Go Enrichment Visualization</h3>
           </div>
+          <Button
+            variant="secondary"
+            target="_blank"
+            href="https://domino.cs.tau.ac.il/"
+          >
+            DOMINO
+          </Button>
         </Container>
 
         <Container className="d-flex flex-column align-items-stretch gap-2 enrich_container">

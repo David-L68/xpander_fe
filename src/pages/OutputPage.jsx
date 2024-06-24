@@ -57,14 +57,13 @@ const OutputPage = () => {
         <h3>Data Visualization</h3>
         <Container className="d-flex align-items-stretch gap-2 output_container">
           <Container className="border border-2 options_menu">
-            options menu
+            options menu 
           </Container>
           <Container
             id="vis_container"
             className="border border-2 visual_results"
           >
-            Visualization
-            {cgm}
+            <iframe src="./Cluster_vis/index2.html"></iframe>
           </Container>
         </Container>
         <Container className="d-flex mt-2">
