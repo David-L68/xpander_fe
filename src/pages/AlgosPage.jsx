@@ -97,7 +97,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("som")}
           className={selectedCard === "som" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src="./assets/som.png" />
           <Card.Body>
             <Card.Title>SOM</Card.Title>
             <Card.Text>
@@ -112,7 +112,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("kmeans")}
           className={selectedCard === "kmeans" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src="./assets/k-means.jpg" />
           <Card.Body>
             <Card.Title>K-Means</Card.Title>
             <Card.Text>

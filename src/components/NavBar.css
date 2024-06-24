@@ -1,17 +1,31 @@
-
 .navbar {
-    background-color: #007bff; /* Ensure the background is primary blue */
-  }
-  
-  .navbar .nav-link,
-  .navbar .navbar-brand,
-  .navbar .dropdown-item {
-    color: #ffffff !important; /* Set text color to white */
-  }
-  
-  .navbar .nav-link:hover,
-  .navbar .navbar-brand:hover,
-  .navbar .dropdown-item:hover {
-    color: #ffdd57 !important; /* Set hover color for better visibility */
-  }
-  
+  background-color: #1a2a3a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-item {
+  color: #ecf0f1 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover,
+.navbar .dropdown-item:hover {
+  color: #3498db !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: #34495e;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+  transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #2c3e50;
+}
