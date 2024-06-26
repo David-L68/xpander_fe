@@ -9,41 +9,41 @@ import "./OutputPage.css";
 
 const OutputPage = () => {
   const navigate = useNavigate();
-  const { algorithm } = useContext(AlgosContext);
+  const { algorithm,  htmlVisualisation} = useContext(AlgosContext);
   // console.log(algorithm);
-  const [visHtml, setVisHtml] = useState("");
+  // const [visHtml, setVisHtml] = useState("");
 
-  useEffect(() => {
-    const fetchVisHtml = async () => {
-      try {
-        const formData = new FormData();
-        const file = await getFileBlob("./data/example_tsv.txt");
-        formData.append("file", file, "example_tsv.txt");
+  // useEffect(() => {
+  //   const fetchVisHtml = async () => {
+  //     try {
+  //       const formData = new FormData();
+  //       const file = await getFileBlob("./data/example_tsv.txt");
+  //       formData.append("file", file, "example_tsv.txt");
 
-        const response = await axios.post(
-          "http://amp.pharm.mssm.edu/clustergrammer/matrix_upload/",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
+  //       const response = await axios.post(
+  //         "http://amp.pharm.mssm.edu/clustergrammer/matrix_upload/",
+  //         formData,
+  //         {
+  //           headers: {
+  //             "Content-Type": "multipart/form-data",
+  //           },
+  //         }
+  //       );
 
-        if (response.status === 200) {
-          // console.log(response.data);
-          setVisHtml(response.data);
-        } else {
-          console.error("Failed to fetch visualization HTML");
-        }
-      } catch (error) {
-        console.error("Error fetching visualization HTML:", error);
-      }
-    };
-    if (algorithm === "hierarchical") {
-      fetchVisHtml();
-    }
-  }, []);
+  //       if (response.status === 200) {
+  //         // console.log(response.data);
+  //         setVisHtml(response.data);
+  //       } else {
+  //         console.error("Failed to fetch visualization HTML");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching visualization HTML:", error);
+  //     }
+  //   };
+  //   if (algorithm === "hierarchical") {
+  //     // fetchVisHtml();
+  //   }
+  // }, []);
 
   const getFileBlob = async (filePath) => {
     try {
@@ -76,7 +76,7 @@ const OutputPage = () => {
           >
             <iframe
               style={{ width: "100%", height: "100%" }}
-              src={visHtml}
+              src={htmlVisualisation}
               frameborder="0"
             ></iframe>
           </Container>

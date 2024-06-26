@@ -4,9 +4,17 @@ const AlgosContext = createContext();
 
 const AlgosProvider = ({ children }) => {
   const [algorithm, setAlgorithm] = useState("");
+  const [htmlVisualisation, setHtmlVisualisation] = useState(null);
 
   return (
-    <AlgosContext.Provider value={{ algorithm, setAlgorithm }}>
+    <AlgosContext.Provider
+      value={{
+        algorithm,
+        setAlgorithm,
+        setHtmlVisualisation,
+        htmlVisualisation,
+      }}
+    >
       {children}
     </AlgosContext.Provider>
   );
