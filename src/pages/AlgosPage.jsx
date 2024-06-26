@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
-import "./AlgosPage.css";
 import { useNavigate } from "react-router-dom";
 import { AlgosContext } from "../context/AlgosProvider";
+import "./AlgosPage.css";
 
 const AlgosPage = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -34,7 +34,7 @@ const AlgosPage = () => {
             src="./assets/MatisseSmall.png"
           />
           <Card.Body>
-            <Card.Title>Matisse</Card.Title>
+            <Card.Title className="fw-bold">Matisse</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -49,7 +49,7 @@ const AlgosPage = () => {
         >
           <Card.Img variant="top" src="./assets/unnamed-chunk-2-1.png" />
           <Card.Body>
-            <Card.Title>Hierarchical Clustering</Card.Title>
+            <Card.Title className="fw-bold">Hierarchical Clustering</Card.Title>
             <Card.Text className="small ">
               Visualization contains dendrogram trees displayed next to and
               above the expression matrix. The rows and columns in the matrix
@@ -65,7 +65,7 @@ const AlgosPage = () => {
         >
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
-            <Card.Title>Click</Card.Title>
+            <Card.Title className="fw-bold" >Click</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -84,7 +84,7 @@ const AlgosPage = () => {
             src="./assets/SambaSmall.png"
           />
           <Card.Body>
-            <Card.Title>Samba</Card.Title>
+            <Card.Title className="fw-bold">Samba</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -99,7 +99,7 @@ const AlgosPage = () => {
         >
           <Card.Img variant="top" src="./assets/som.png" />
           <Card.Body>
-            <Card.Title>SOM</Card.Title>
+            <Card.Title className="fw-bold">SOM</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -114,7 +114,7 @@ const AlgosPage = () => {
         >
           <Card.Img variant="top" src="./assets/k-means.jpg" />
           <Card.Body>
-            <Card.Title>K-Means</Card.Title>
+            <Card.Title className="fw-bold">K-Means</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
