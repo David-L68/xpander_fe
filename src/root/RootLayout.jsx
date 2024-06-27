@@ -1,16 +1,15 @@
-import { Container } from "react-bootstrap";
-import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import "./RootLayout.css";
 
 const RootLayout = () => {
   return (
-    <Container className="mt-4">
-      <Container className="d-flex flex-column">
-        <NavBar />
+    <div className="root-layout">
+      <NavBar />
+      <main className="main-content">
         <Outlet />
-      </Container>
-    </Container>
+      </main>
+    </div>
   );
 };
 
