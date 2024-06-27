@@ -8,23 +8,23 @@ const HomePage = () => {
 
   return (
     <motion.div
-      style={{ height: "100vh" }}
+      className="homepage-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <Container className="h-100 d-flex flex-column justify-content-center align-items-center">
+      <Container className="d-flex gap-4 flex-column justify-content-center align-items-center h-100">
         <h1 className="mb-4 text-center">Welcome to the Xpander Website</h1>
         <Button
           onClick={() => navigate("/input")}
-          className="mb-5 px-4 py-2"
+          className="mb-4 px-4 py-2"
           variant="primary"
           size="lg"
         >
           Start using Xpander
         </Button>
         <Image
-          src="./assets/Dall-E_xpander_v1.webp"
+          src="./assets/logo_xpander_3.webp"
           alt="Xpander Logo"
           className="img_cont"
           rounded

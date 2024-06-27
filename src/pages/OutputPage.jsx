@@ -9,7 +9,7 @@ import "./OutputPage.css";
 
 const OutputPage = () => {
   const navigate = useNavigate();
-  const { algorithm,  htmlVisualisation} = useContext(AlgosContext);
+  const { algorithm, htmlVisualisation } = useContext(AlgosContext);
   // console.log(algorithm);
   // const [visHtml, setVisHtml] = useState("");
 
@@ -45,17 +45,17 @@ const OutputPage = () => {
   //   }
   // }, []);
 
-  const getFileBlob = async (filePath) => {
-    try {
-      const response = await axios.get(filePath, {
-        responseType: "blob",
-      });
-      return new Blob([response.data]);
-    } catch (error) {
-      console.error(`Error fetching file ${filePath}:`, error);
-      throw error;
-    }
-  };
+  // const getFileBlob = async (filePath) => {
+  //   try {
+  //     const response = await axios.get(filePath, {
+  //       responseType: "blob",
+  //     });
+  //     return new Blob([response.data]);
+  //   } catch (error) {
+  //     console.error(`Error fetching file ${filePath}:`, error);
+  //     throw error;
+  //   }
+  // };
 
   return (
     <motion.div
@@ -64,80 +64,73 @@ const OutputPage = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
-      <Container className="mt-3 d-flex flex-column justify-content-center align-items-center gap-2">
-        <h3>Data Visualization</h3>
-        <Container className="d-flex align-items-stretch gap-2 output_container">
-          {/* <Container className="border border-2 options_menu">
-            options menu
-          </Container> */}
-          <Container
-            id="vis_container"
-            className="border border-2 visual_results"
-          >
+      <div className="full-width-container">
+        <h3 className="text-center mt-3">Data Visualization</h3>
+        <div className="output_container">
+          <div id="vis_container" className="visual_results">
             <iframe
               style={{ width: "100%", height: "100%" }}
               src={htmlVisualisation}
-              frameborder="0"
+              frameBorder="0"
             ></iframe>
-          </Container>
-        </Container>
-        <Container className="d-flex mt-2">
+          </div>
+        </div>
+        <div className="button-container mt-3">
           <Button
             onClick={() => navigate("/algocards")}
-            className="me-auto p-2 align-self-start"
             variant="primary"
             size="lg"
           >
             Back
-          </Button>{" "}
-          <Button
-            href="https://domino.cs.tau.ac.il/"
-            target="_blank"
-            className=" p-2 align-self-start"
-            variant="secondary"
-            size="lg"
-          >
-            DOMINO
-          </Button>{" "}
-          <Button
-            onClick={() => navigate("/goenrichment")}
-            className="ms-4 p-2 align-self-start"
-            variant="primary"
-            size="lg"
-          >
-            GO Enrichment analysis
-          </Button>{" "}
-        </Container>
-      </Container>
+          </Button>
+          <div className="right-buttons">
+            <Button
+              href="https://domino.cs.tau.ac.il/"
+              target="_blank"
+              variant="secondary"
+              size="lg"
+              className="me-2"
+            >
+              DOMINO
+            </Button>
+            <Button
+              onClick={() => navigate("/goenrichment")}
+              variant="primary"
+              size="lg"
+            >
+              GO Enrichment analysis
+            </Button>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 };
 
 export default OutputPage;
 
-
 // useEffect(() => {
-  //   const fetchHierarchicalData = async () => {
-  //     try {
-  //       const response = await fetch("./data/mult_view.json", {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           Accept: "application/json",
-  //         },
-  //       });
+//   const fetchHierarchicalData = async () => {
+//     try {
+//       const response = await fetch("./data/mult_view.json", {
+//         headers: {
+//           "Content-Type": "application/json",
+//           Accept: "application/json",
+//         },
+//       });
 
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setHierarchicalData(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//       }
+//       const data = await response.json();
+//       console.log(data);
+//       setHierarchicalData(data);
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   };
 
-  //   if (algorithm === "hierarchical") {
-  //     fetchHierarchicalData();
-  //   }
-  // }, []);
+//   if (algorithm === "hierarchical") {
+//     fetchHierarchicalData();
+//   }
+// }, []);

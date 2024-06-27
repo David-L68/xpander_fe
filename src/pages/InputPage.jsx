@@ -29,7 +29,8 @@ const InputPage = () => {
         // Handle error
       }
     } else {
-      alert("Please select a file before running the test.");
+      // alert("Please select a file before running the test.");
+      navigate("/algocards")
     }
   };
   return (

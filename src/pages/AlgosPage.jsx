@@ -29,7 +29,7 @@ const AlgosPage = () => {
           className={selectedCard === "Matisse" ? "selected-card" : ""}
         >
           <Card.Img
-            className="p-4"
+            className="card-img-custom"
             variant="top"
             src="./assets/MatisseSmall.png"
           />
@@ -47,7 +47,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("hierarchical")}
           className={selectedCard === "hierarchical" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="./assets/unnamed-chunk-2-1.png" />
+          <Card.Img className="card-img-custom" variant="top" src="./assets/unnamed-chunk-2-1.png" />
           <Card.Body>
             <Card.Title className="fw-bold">Hierarchical Clustering</Card.Title>
             <Card.Text className="small ">
@@ -63,7 +63,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("Click")}
           className={selectedCard === "Click" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img className="card-img-custom" variant="top" src="./assets/logo_xpander_2.webp" />
           <Card.Body>
             <Card.Title className="fw-bold" >Click</Card.Title>
             <Card.Text>
@@ -79,7 +79,7 @@ const AlgosPage = () => {
           className={selectedCard === "Samba" ? "selected-card" : ""}
         >
           <Card.Img
-            className="p-4"
+            className="card-img-custom"
             variant="top"
             src="./assets/SambaSmall.png"
           />
@@ -97,7 +97,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("som")}
           className={selectedCard === "som" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="./assets/som.png" />
+          <Card.Img className="card-img-custom" variant="top" src="./assets/som.png" />
           <Card.Body>
             <Card.Title className="fw-bold">SOM</Card.Title>
             <Card.Text>
@@ -112,7 +112,7 @@ const AlgosPage = () => {
           onClick={() => handleCardClick("kmeans")}
           className={selectedCard === "kmeans" ? "selected-card" : ""}
         >
-          <Card.Img variant="top" src="./assets/k-means.jpg" />
+          <Card.Img className="card-img-custom" variant="top" src="./assets/k-means.jpg" />
           <Card.Body>
             <Card.Title className="fw-bold">K-Means</Card.Title>
             <Card.Text>
