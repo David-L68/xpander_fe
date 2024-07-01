@@ -59,3 +59,11 @@
   font-size: 1.25rem;
   padding: 0.5rem 0.75rem;
 }
+
+.navbar-nav .nav-item:not(.dropdown) {
+  margin-right: 1rem;
+}
+
+.navbar-nav .dropdown {
+  margin-left: 1rem;
+}

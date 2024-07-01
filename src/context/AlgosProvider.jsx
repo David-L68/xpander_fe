@@ -5,6 +5,7 @@ const AlgosContext = createContext();
 const AlgosProvider = ({ children }) => {
   const [algorithm, setAlgorithm] = useState("");
   const [htmlVisualisation, setHtmlVisualisation] = useState(null);
+  const [pcaVisualisation, setPcaVisualisation] = useState([]);
 
   return (
     <AlgosContext.Provider
@@ -13,6 +14,8 @@ const AlgosProvider = ({ children }) => {
         setAlgorithm,
         setHtmlVisualisation,
         htmlVisualisation,
+        pcaVisualisation,
+        setPcaVisualisation
       }}
     >
       {children}
